@@ -6,10 +6,10 @@
 
 - name: enable and install redis
   ansible.builtin.dnf:
-    name: '@redis:remi-6.2'
+    name: "@redis:remi-6.2"
     state: installed
 
-- name: update redis listen adress
+- name: update redis listen address
   ansible.builtin.replace:
     path: /etc/redis.conf
     regexp: '127.0.0.1'
