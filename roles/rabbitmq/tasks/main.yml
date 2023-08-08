@@ -5,11 +5,11 @@
 - name: setup rabbitmq repo
   ansible.builtin.shell: curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | bash
 
-- name: Install erlang and rabbit mq
+- name: Install erlang and rabbitmq
   ansible.builtin.yum:
     name:
       - erlang
-      - rabbitmq
+      - rabbitmq-server
     state: installed
 
 - name: start rabbitmq service
